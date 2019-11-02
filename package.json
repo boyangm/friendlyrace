@@ -1,0 +1,31 @@
+{
+  "name": "friendlyrace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix raceMe",
+    "dev": "concurrently \"npm run server\" \"expo start raceMe\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix raceMe && npm run build --prefix raceMe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyangm/friendlyrace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boyangm/friendlyrace/issues"
+  },
+  "homepage": "https://github.com/boyangm/friendlyrace#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7"
+  }
+}
