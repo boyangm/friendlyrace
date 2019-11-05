@@ -20,7 +20,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/giggrab"
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('Mongo Db connected'))
 .catch(err => console.log(err));
-node
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('giggrab/build'))
     app.get('*', (req, res) => {
